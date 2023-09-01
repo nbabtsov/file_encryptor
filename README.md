@@ -3,50 +3,6 @@
 A multi-threaded file encryptor which applies the Caesar cipher to an input file and outputs the result to a specified output file. 
 To reduce predicatability, the encryption module randomly resets itself with a new encryption key. 
 
-## How it works 
-Five threads exist: main, encryption, reader, writer, input counter and output counter. Several semaphores are defined to control syncronization among these threads to avoid race conditions. 
-
-### Main Thread 
-1. Obtains the input and output files as command line arguments. If the number of 
-command line arguments is incorrect, it exits after displaying a message about correct usage. 
-2. Calls init( ) with the input and output file names. 
-3. Prompts the user for the input and output buffer sizes N and M. The buffers may be any 
-size >1. 
-4. Initialize shared variables. This includes allocating appropriate data structures for the 
-input (N characters) and output (M characters) buffers.
-5. Creates the other threads. 
-6. Waits for all threads to complete. 
-7. Displays the number of occurrences of each letter in the input and output files.
-### Encryption Thread
-Consumes one character at a time from the input buffer, encrypts it (using `caesar_encrypt()`), and places it in the output buffer. The encryption thread may need to wait for an item to 
-become available in the input buffer, and for a slot to become available in the output buffer. A character in the output buffer cannot be overwritten until the writer thread and the output 
-counter thread have processed the character. The encryption thread continues until all characters of the input file have been encrypted.
-
-### Reader Thread 
-
-Reads from the input file one character at a time (using `read_input()`), and places the characters in the input buffer. Each buffer item corresponds to a character. The reader thread may 
-need to block until other threads have consumed data from the input buffer. Specifically, a character in the input buffer cannot be overwritten until the encryptor thread and the input 
-counter thread have processed the character. The reader continues until the end of the input file is reached.
-
-### Writer Thread
-Writes the encrypted characters in the output buffer to the output file (using `write_output`). It will block until an encrypted character is available in the buffer. The writer 
-continues until it has written the last encrypted character. 
-
-### Input Counter Thread 
-Counts occurrences of each letter (using `count_input()`) in the input file by looking at each character in the input buffer. It will block if no characters are available in the input buffer.
-
-### Outpt Counter Thread 
-Counts occurrences of each letter (using `count_output()`) in the output file by looking at each character in the output buffer. It will block if no characters are available in the output buffer.
-
-### Encryption Module Reset 
-To reduce predicatability, the encryption module randomly resets itself with a new encryption key. 
-When this happens, the input and output counts are reset to zero. Before it performs a reset, it 
-will inform the application by calling `reset_requested()`. After a reset is complete, it will call 
-`reset_finished()`.These function calls are used to print the input and output counts before the 
-reset, to ensure the correct behavior of the system during and after the reset. Only the 
-characters encrypted using a particular key would be counted together and there would be no 
-characters that go uncounted.
-
 ## Compile
 ```
 nikababtsov@LAPTOP-VGHR5LTP:/mnt/c/Users/Nika/file_encryptor$ make
@@ -102,4 +58,49 @@ End of file reached
 ```
 
 input and resulting output file can be viewed under `file_encryptor/input.txt` and  `file_encrypter/output.txt`
+
+## How it works 
+Five threads exist: main, encryption, reader, writer, input counter and output counter. Several semaphores are defined to control syncronization among these threads to avoid race conditions. 
+
+#### Main Thread 
+1. Obtains the input and output files as command line arguments. If the number of 
+command line arguments is incorrect, it exits after displaying a message about correct usage. 
+2. Calls init( ) with the input and output file names. 
+3. Prompts the user for the input and output buffer sizes N and M. The buffers may be any 
+size >1. 
+4. Initialize shared variables. This includes allocating appropriate data structures for the 
+input (N characters) and output (M characters) buffers.
+5. Creates the other threads. 
+6. Waits for all threads to complete. 
+7. Displays the number of occurrences of each letter in the input and output files.
+### Encryption Thread
+Consumes one character at a time from the input buffer, encrypts it (using `caesar_encrypt()`), and places it in the output buffer. The encryption thread may need to wait for an item to 
+become available in the input buffer, and for a slot to become available in the output buffer. A character in the output buffer cannot be overwritten until the writer thread and the output 
+counter thread have processed the character. The encryption thread continues until all characters of the input file have been encrypted.
+
+#### Reader Thread 
+
+Reads from the input file one character at a time (using `read_input()`), and places the characters in the input buffer. Each buffer item corresponds to a character. The reader thread may 
+need to block until other threads have consumed data from the input buffer. Specifically, a character in the input buffer cannot be overwritten until the encryptor thread and the input 
+counter thread have processed the character. The reader continues until the end of the input file is reached.
+
+#### Writer Thread
+Writes the encrypted characters in the output buffer to the output file (using `write_output`). It will block until an encrypted character is available in the buffer. The writer 
+continues until it has written the last encrypted character. 
+
+#### Input Counter Thread 
+Counts occurrences of each letter (using `count_input()`) in the input file by looking at each character in the input buffer. It will block if no characters are available in the input buffer.
+
+### Outpt Counter Thread 
+Counts occurrences of each letter (using `count_output()`) in the output file by looking at each character in the output buffer. It will block if no characters are available in the output buffer.
+
+#### Encryption Module Reset 
+To reduce predicatability, the encryption module randomly resets itself with a new encryption key. 
+When this happens, the input and output counts are reset to zero. Before it performs a reset, it 
+will inform the application by calling `reset_requested()`. After a reset is complete, it will call 
+`reset_finished()`.These function calls are used to print the input and output counts before the 
+reset, to ensure the correct behavior of the system during and after the reset. Only the 
+characters encrypted using a particular key would be counted together and there would be no 
+characters that go uncounted.
+
 
