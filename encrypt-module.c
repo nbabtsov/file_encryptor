@@ -1,10 +1,3 @@
-/**
-All functionality/methods are contained within encrypt-module.c, which reads input from a source file and outputs an encrypted version of the output into a supplied output file. 
-It will also output the total character count as well as the count of each letter which occurs in both the input and output (encrypted) file to the console.
-It works mostly as intended, however, it will only call reset once (the reset function is not fully working). Everything else works as expected. 
-Refer to each function for more elaborate documentation. 
-**/
-
 #include "encrypt-module.h"
 #include <stdio.h>
 #include <stdlib.h>
