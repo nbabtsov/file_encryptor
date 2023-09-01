@@ -1,5 +1,5 @@
 # file_encryptor
-multi-threaded file encryptor
+A multi-threaded file encryptor which applies the Caesar cipher to an input file
 
 
 ## Compile
