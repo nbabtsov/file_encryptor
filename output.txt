@@ -1,0 +1,324 @@
+#jodmvef <tuejp.i>
+#jodmvef <tusjoh.i>
+#jodmvef <tuemjc.i>
+#jodmvef <vojtue.i>
+#jodmvef <gdoum.i>
+#jodmvef <tzt/xbju.i>
+#jodmvef <tzt/uzqft.i>
+#jodmvef <tzt/jkrk.y>
+#zetcluv <jzxerc.y>
+
+#uvwzev DRO_CZEV 80
+#uvwzev DRO_RIXJ (DRO_CZEV/2 + 1)
+#uvwzev IVUZIVTK_FLK_FG '>'
+#uvwzev IVUZIVTK_ZE_FG '<'
+#uvwzev GZGV_FG '|'
+#uvwzev SX_FG '&'
+
+/* Yfcuj r jzexcv tfddreu. */
+kpgvuvw jkiltk Tdu {
+	/* Kyv tfddreu rj zeglk sp kyv ljvi. */
+	tyri czev[DRO_CZEV + 1];
+	/* Kyv tfddreu rj elcc kvidzerkvu kfbvej. */
+	tyri kfbveCzev[DRO_CZEV + 1];
+	/* Gfzekvij kf vrty rixldvek ze kfbveCzev, efe-rixldvekj riv ELCC. */
+	tyri* rixj[DRO_RIXJ];
+	/* Gfzekvij kf vrty jpdsfc ze kfbveCzev, efe-jpdsfcj riv ELCC. */
+	tyri* jpdsfcj[DRO_RIXJ];
+	/* Kyv giftvjj zu fw kyv vovtlkzex tfddreu. */
+	gzu_k gzu;
+
+	/* Kyvjv mrizrscvj yvcg bvvg kirtb fw nyvkyvi r giftvjj zj jkfggvu, gizekvu fi, ufev. Zw Zk'j efk jkfggvu, zk'j rjjldvu kf sv ileezex */
+	zek ufev;
+	zek gizekvu;
+	zek jkfggvu;
+} Tdu;
+
+Tdu** afsj; //xcfsrc czjk fw fkxo 
+
+/* Pda lnkyaoo kb pda yqnnajphu atayqpejc bknacnkqjz ykiiwjz, kn 0. */
+Yiz* bknacnkqjz_fkx;
+
+/* opknao LEZ kb yqnnajphu nqjjejc bknacnkqjz lknyaoo*/
+lez_p bknacnkqjzLez = 0;
+
+/* gaalo pnwyg kb pda jqixan kb fkxo  */ 
+ejp chkxwh_fkx_jqi = 0; 
+
+
+/* Lwnoao pda ykiiwjz opnejc ykjpwejaz ej yiz->heja.
+ * * Wooqiao whh beahzo ej yiz (atyalp yiz->heja) wna ejepwehevaz pk vank.
+ * * Kj napqnj, whh beahzo kb yiz wna wllnklnewphu lklqhwpaz. */
+rkez lwnoaYiz(Yiz* yiz) {
+	ydwn* pkgaj;
+	ejp e=0;
+	opnylu(yiz->pkgajHeja, yiz->heja);
+	opnpkg(yiz->pkgajHeja, "\j");
+	pkgaj = opnpkg(yiz->pkgajHeja, " ");
+	sdeha (pkgaj != JQHH) {
+		eb (*pkgaj == '\j') {
+			yiz->wnco[e] = JQHH;
+		} ahoa eb (*pkgaj == NAZENAYP_KQP_KL || *pkgaj == NAZENAYP_EJ_KL
+				|| *pkgaj == LELA_KL || *pkgaj == XC_KL) {
+			yiz->ouixkho[e] = pkgaj;
+			yiz->wnco[e] = JQHH;
+		} ahoa {
+			yiz->wnco[e] = pkgaj;
+		}
+		pkgaj = opnpkg(JQHH, " ");
+		e++;
+	}
+	yiz->wnco[e] = JQHH;
+}
+
+/* Bejzo pda ejzat kb pda benop kyyqnwjya kb ouixkh ej yiz->ouixkho.
+ * * Obqrokp -1 fc klq clrka. */
+fkq cfkaPvjyli(Zja* zja, zexo pvjyli) {
+	clo (fkq f = 0; f < JXU_XODP; f++) {
+		fc (zja->pvjylip[f] && *zja->pvjylip[f] == pvjyli) {
+			obqrok f;
+		}
+	}
+	obqrok -1;
+}
+
+/* Pfdkxi exkaibo clo PFDQPQM (PFDkxi - Qbojfkxi PQlM),
+ * tefze fp zxrpba yv qeb rpbo mobppfkd zlkqoli+w. */
+slfa pfdqpqmExkaibo(fkq pfd_krj) {
+	/* Obpbq exkaibo ql zxqze kbuq PFDQPQM. */
+	pfdkxi(PFDQPQM, pfdqpqmExkaibo);
+	fc (clobdolrkaMfa > 0) {
+		/* Cltxoa PFDQPQM ql qeb zroobkqiv orkkfkd clobdolrka molzbpp. */
+		hfii(clobdolrkaMfa, PFDQPQM);
+		/* QLAL: Xaa clobdolrka zljjxka ql qeb ifpq lc glyp. */
+		glyp[dilyxi_gly_krj] = clobdolrka_gly;
+		glyp[dilyxi_gly_krj]->pqlmmba = 1; 
+		dilyxi_gly_krj++;
+	}
+}
+
+/* qefp jbqela exkaibp obafobzqflk xka mfmfkd, xp tbii xp xii obdrixo zljjxka bubzrqflk*/
+slfa bubzrqbZljjxka(Zja *zja){
+	//zefia molzbpp zxiip bubzsm() ql ork zja
+	//zebzhp clo obafobzqp cfopq
+	
+	// <
+
+	fc(cfkaPvjyli(zja, OBAFOBZQ_FK_LM) != -1){
+		fkq fk = cfkaPvjyli(zja, OBAFOBZQ_FK_LM);
+		fkq caFk = lmbk(zja->xodp[fk+1], L_OALKIV); //dbqp cfib ql obxa colj 
+		arm2(caFk, 0); //pbqp cfib xp pqafk
+
+	}
+
+	// >
+	fc(cfkaPvjyli(zja, OBAFOBZQ_LRQ_LM) != -1){
+		fkq lrq = cfkaPvjyli(zja, OBAFOBZQ_LRQ_LM);
+		fkq caLrq = lmbk(zja->xodp[lrq+1], L_TOLKIV|L_ZOBXQ); //dbqp cfib ql tofqb qa
+		pgb2(rpAgf, ruxqza(efpagf)); //eqfe ruxq me efpagf 
+	}
+
+	//ftqz otqowe rad bubqe
+	ur(ruzpEkynax(oyp, BUBQ_AB) != -1){
+		uzf bubqBae = ruzpEkynax(oyp, BUBQ_AB); //xe | sdqb fjf >> bubqBae = 1
+		uzf zgy = bubqBae + 1;
+		ituxq(oyp->mdse[zgy] != ZGXX){zgy++;}
+		zgy = zgy - bubqBae - 1; // xe | sdqb fjf >> zgy = 2
+		
+		//babgxmfuzs mdseXqrf
+		otmd* mdseXqrf[bubqBae * eulqar(otmd*)];
+		rad(uzf u = 0; u < bubqBae; u++){mdseXqrf[u] = oyp->mdse[u];}
+
+		//babgxmfuzs mdseDustf
+		otmd* mdseDustf[zgy * eulqar(otmd*)];
+		uzf bmdeqd = bubqBae + 1;
+		rad(uzf u = 0; u < zgy; u++){
+			mdseDustf[u] = oyp->mdse[bmdeqd];
+			bmdeqd++;
+		}
+
+		//ymwuzs bubqe
+		uzf rp[2];
+		bubq(rp);
+		bup_f bup = radw();
+		ur(bup < 0) dqfgdz;
+		ur(bup == 0){ //otuxp
+			pgb2(rp[0], 0);
+			oxaeq(rp[1]);
+			qjqohb(mdseDustf[0], mdseDustf); //paqe zaf dqfgdz 
+			bqddad("otuxp qjq rmuxqp\z");
+			qjuf(1); //qddad ur dqfgdzqp 
+		}
+		qxeq { //bmdqzf
+			pgb2(rp[1], 1);
+			oxaeq(rp[0]);
+			qjqohb(mdseXqrf[0], mdseXqrf); //paqe zaf dqfgdz 
+			bqddad("bmdqzf lel mhpslk\u");
+			lepa(1); //lyyvy pm ylabyulk 
+		}
+		ylabyu; //ylabyu olyl iljhbzl dl kvu'a dhua av leljbal pa adpjl
+	}
+
+	//Leljbal aol jvtthuk
+	leljcw(jtk->hynz[0], jtk->hynz);
+	
+	
+	
+}
+
+/* ybuz jvtthuk pu ihjrnyvbuk */
+pua ihjrnyvbukJtk(Jtk *jtk){
+	wpk_a mvyrWPK = mvyr();
+	pm(mvyrWPK == 0){
+		leljbalJvtthuk(jtk); 
+		lepa(0);
+	}
+	lszl{
+		qviz[nsvihs_qvi_ubt] = jtk;
+		qviz[nsvihs_qvi_ubt]->wpk = mvyrWPK;
+		qviz[nsvihs_qvi_ubt]->kvul = 0;
+		qviz[nsvihs_qvi_ubt]->wypualk = 0;
+		qviz[nsvihs_qvi_ubt]->zavwwlk = 0;
+		wypuam("[%k]	%k\u", nsvihs_qvi_ubt, mvyrWPK);
+		nsvihs_qvi_ubt++; 
+
+	}
+	ylabyu 0;
+}
+
+/* ybuz jvtthuk pu mvylnyvbuk */
+pua mvylNyvbukJtk(Jtk *jtk){ 
+	wpk_a mvyrWPK = mvyr();
+	pm(mvyrWPK >= 0){  //mvyr zbjjlzmbs 
+		yv(vehaFYT == 0){ //sxybt fhesuii
+			unuskjuSeccqdt(sct); //unuslf(sct->qhwi[0], sct->qhwi);
+			unyj(0); 
+		}
+		
+		ubiu //fqhudj fhesuii, ixekbt mqyj veh sxybt 
+		{
+			vehuwhekdtFyt = vehaFYT; 
+			vehuwhekdt_zer = (Sct*) cqbbes(1 * iypuev(Sct));
+			vehuwhekdt_zer = sct;
+			mqyjfyt(vehaFYT, DKBB, MKDJHQSUT);
+		}
+	}
+	ubiu{ //veha vqybut 
+		fhydjv("veha vqybut");
+	}
+	hujkhd 0; 
+}
+
+/* Jxyi cujxet sxusai jxu ijqjki ev zeri*/
+ydj fhesuiiSxusa(ydj unyjSetu){ 
+	veh (ydj y = 0; y < wberqb_zer_dkc; y++){
+		ydj ijqjki; 
+		ydj qcf = vydtIocreb(zeri[y], RW_EF);
+		fyt_j sxusauh = mqyjfyt(zeri[y]->fyt, &ijqjki, MDEXQDW);
+
+		yv(sxusauh > 0){ //jxyi ifusyvys zer yi juhcydqjut
+			yv(MYVUNYJUT(ijqjki)){
+				ijqjki = MUNYJIJQJKI(ijqjki);
+				zeri[y]->tedv = 1;
+			}
+			vcjv zw(NZWJZXERCVU(jkrklj)){
+				jkrklj = NKVIDJZX(jkrklj);
+				afsj[z]->ufev = 1;
+				gizekw("[%u]\kKvidzerkvu\k", z);
+				zek e = 0; 
+				zw(afsj[z]->gizekvu == 0){
+					nyzcv(1){
+						zw(rdg == e){sivrb;}
+						zw(afsj[z]->rixj[e] == ELCC && afsj[z]->jpdsfcj[e] == ELCC){sivrb;}
+                        vcjv zw(afsj[z]->rixj[e] == ELCC){gizekw("%j ", afsj[z]->jpdsfcj[e]);}
+                        vcjv{ gizekw("%j ", afsj[z]->rixj[e]);}
+                        e++;
+                    }
+					afsj[z]->gizekvu = 1;
+					gizekw("\e");
+				}
+				obqrok 0;
+			}
+
+			fc(pqxqrp != 0){mofkqc("[%a]\qBufq\q%a ", f, pqxqrp);}
+			bipb {mofkqc("[%a]\qAlkb\q\q", f); }
+			//illm ql mofkq xodp
+			fkq k = 0;
+			fc(glyp[f]->mofkqba == 0){
+				tefib(1){
+					fc(xjm == k){yobxh;}
+					fc(glyp[f]->xodp[k] == KRII && glyp[f]->pvjylip[k] == KRII){yobxh;}
+					bipb fc(glyp[f]->xodp[k] == KRII){mofkqc("%p ", glyp[f]->pvjylip[k]);}
+					bipb{ mofkqc("%p ", glyp[f]->xodp[k]);}
+					k++;
+				}
+				glyp[f]->mofkqba = 1;
+				mofkqc("\k");
+			}
+		}
+
+
+
+
+	}
+}
+
+fkq jxfk(slfa) {
+	/* Ifpqbk clo zlkqoli+w (prpmbka molzbpp). */
+	pfdkxi(PFDQPQM, pfdqpqmExkaibo);
+	glyp = jxiilz(pfwblc(Zja)*100); //ifjfqp krjybo lc glyp ql 100 xq xkv dfsbk qfjb 
+	fkq yd = 0;
+	tefib (1) {
+		mofkqc("352> ");
+		ccirds(deozfe);
+		Nxo *nxo = (Nxo*) nlwwzn(1, dtkpzq(Nxo));
+		qrped(nxo->wtyp, XLI_WTYP, deoty);
+		alcdpNxo(nxo);
+
+		tye acznpddnspnv = acznpddNspnv(mr);
+
+		tq (!nxo->lcrd[0]) {
+			qcpp(nxo);
+		} pwdp tq (decnxa(nxo->lcrd[0], "pite") == 0) {
+			qcpp(nxo);
+			pite(0);
+		}
+		pwdp tq(decnxa(nxo->lcrd[0], "uzmd") == 0){ //otdawljd l wtde zq lww nfccpye uzmd
+			qzc(tye t = 0; t < rwzmlw_uzm_yfx; t++){
+				tq(uzmd[t]->ozyp == 0 && uzmd[t]->actyepo == 0 && uzmd[t]->dezaapo != 1){actyeq("[%o]\eCfyytyr\e\e%d", t, uzmd[t]->wtyp);}
+				pwdp tq(uzmd[t]->ozyp == 1 && uzmd[t]->actyepo == 0 && uzmd[t]->dezaapo != 1){
+					actyeq("[%o]\eOzyp\e\e%d", t, uzmd[t]->wtyp);
+					uzmd[t]->actyepo = 1;
+				}
+				pwdp tq(uzmd[t]->dezaapo == 1){actyeq("[%o]\eDezaapo\e\e%d", t, uzmd[t]->wtyp);}
+			}
+		}
+		
+		pwdp tq(decnxa(nxo->lcrd[0], "mr") == 0){ //afed te tsuc aflg jmffafy xjge klghhwv klslw
+			afl afv = slga(uev->sjyk[1]);
+			afl bgtHav = bgtk[afv]->hav;
+			cadd(bgtHav, KAYUGFL);
+			bgtk[afv]->klghhwv = 0;
+		}
+		wdkw {
+			
+			ax (xafvKqetgd(uev, TY_GH) != -1) {	 //tsuyjgmfv kqetgd &
+				ty = tsucyjgmfvUev(uev); 
+			} 
+			wdkw {
+				afl xy = xgjwYjgmfvUev(uev); //hml al af lzw xgjwyjgmfv 
+			}
+		}
+
+		
+	
+	}
+	
+	//xjwwk bgtk
+	xgj(afl a = 0; a < ydgtsd_bgt_fme; a++){
+		xjww(bgtk[a]);
+	}
+	xjww(bgtk);
+
+	jwlmjf 0;
+}
