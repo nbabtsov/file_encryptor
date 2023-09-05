@@ -105,4 +105,25 @@ End of file reached
 
 input and resulting output file can be viewed under `file_encryptor/input.txt` and  `file_encrypter/output.txt`
 
+### input/output excerpts
+
+input.txt 
+```
+As they rounded a bend in the path that ran beside the river, Lara recognized the silhouette of a fig tree atop a nearby hill. The weather was hot and the days were long. The fig tree was in full leaf, but not yet bearing fruit.
+Soon Lara spotted other landmarks—an outcropping of limestone beside the path that had a silhouette like a man’s face, a marshy spot beside the river where the waterfowl were easily startled, a tall tree that looked like a man with his arms upraised. They were drawing near to the place where there was an island in the river. The island was a good spot to make camp. They would sleep on the island tonight.
+Lara had been back and forth along the river path many times in her short life. Her people had not created the path—it had always been there, like the river—but their deerskin-shod feet and the wooden wheels of their handcarts kept the path well worn. Lara’s people were salt traders, and their livelihood took them on a continual journey.
+At the mouth of the river,
+```
+
+output.txt 
+
+```
+Bt uifz spvoefe b cfoe jo uif qbui uibu sbo cftjef uif sjwfs, Mbsb sfdphojafe uif tjmipvfuuf pg b gjh usff bupq b ofbscz ijmm. Uif xfbuifs xbt taf mzp ftq pmke iqdq xazs. Ftq rus fdqq ime uz rgxx xqmr, ngf zaf kqf nqmduzs rdguf.
+Eaaz Xmdm ebaffqp aftqd xmzpymdwe—mz agfodabbuzs ar xuyqefazq nqeupq ftq bmft ftmf tmp m euxtagqffq xuwq m ymz’e rmoq, m ymdetk ebaf nqeupq ftq duhqd itqdq ftq imfqdraix iqdq qmeuxk efmdfxqp, m fmxx fdqq ftmf xaawqp xuwq m ymz iuft tue mdye gbdmueqp. Ftqk iqdq pdmiuzs zqmd fa ftq bxmoq itqdq ftqdq ime mz uexmzp uz ftq duhqd. Ftq uexmzp ime m saap ebaf fa ymwq omyb. Ftqk iagxp exqqb az ftq uexmzp fazustf.
+Xmdm tmp nqqz nmow mzp radft mxazs ftq duhqd bmft ymzk fuyqe uz tqd etadf xurq. Tqd bqabxq tmp zaf odqmfqp ftq bmft—uf tmp mximke nqqz ftqdq, xuwq ftq duhqd—ngf ftqud pqqdewuz-etap rqqf mzp ftq iaapqz itqqxe ar ftqud tmzpomdfe wqbf ftq bmft iqxx iadz. Xmdm’e bqabxq iqdq emxf fdmpqde, mzp ftqud xuhqxutaap faaw ftqy az m oazfuzgmx vagdzqk.
+Mf ftq yagft ar ftq duhqd,
+```
+
+
+
 
