@@ -37,7 +37,7 @@ continues until it has written the last encrypted character.
 #### Input Counter Thread 
 Counts occurrences of each letter (using `count_input()`) in the input file by looking at each character in the input buffer. It will block if no characters are available in the input buffer.
 
-### Outpt Counter Thread 
+#### Outpt Counter Thread 
 Counts occurrences of each letter (using `count_output()`) in the output file by looking at each character in the output buffer. It will block if no characters are available in the output buffer.
 
 #### Encryption Module Reset 
