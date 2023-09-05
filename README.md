@@ -7,6 +7,11 @@ To reduce predicatability, the encryption module randomly resets itself with a n
 ## How it works 
 Five threads exist: main, encryption, reader, writer, input counter and output counter. Several semaphores are defined to control syncronization among these threads to avoid race conditions. 
 
+![image](https://github.com/nbabtsov/file_encryptor/assets/31867318/71e3c286-5e1c-430b-aad4-9a1e0933c0cd)
+
+
+
+
 #### Main Thread 
 1. Obtains the input and output files as command line arguments. If the number of 
 command line arguments is incorrect, it exits after displaying a message about correct usage. 
