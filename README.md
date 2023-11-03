@@ -1,4 +1,4 @@
-# file_encryptor
+# file_encryptor (ISU CS352 - Operating Systems, 2020)
 
 A multi-threaded file encryptor which applies the Caesar cipher to an input file and outputs the result to a specified output file. 
 To reduce predicatability, the encryption module randomly resets itself with a new encryption key. 
